@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Models;
+
+use Core\Pdo\Model;
+
+/**
+ * %_NAME_%
+ *
+ * @version %_VERSION_%
+ */
+
+class %_NAME_% extends Model
+{
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = '%_TABLE_%';
+
+    /**
+     * The primary key for the model.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string,string>
+     */
+    protected $casts = [];
+}

@@ -1,0 +1,14 @@
+<?php
+
+use Core\Context;
+
+/**
+ * %_NAME_%.php
+ *
+ * @version %_VERSION_%
+ * @return boolean `true` if task is recurring 
+ */
+
+return function (Context $context) {
+    return false;
+};

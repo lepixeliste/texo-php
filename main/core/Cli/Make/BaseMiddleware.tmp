@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Middlewares;
+
+use Closure;
+use Core\Http\Request;
+use Core\Routing\MiddlewareInterface;
+use Core\Psr\Http\Message\ResponseInterface;
+
+/**
+ * %_NAME_%
+ *
+ * @version %_VERSION_%
+ */
+
+class %_NAME_% implements MiddlewareInterface
+{
+    public function process(Request $request, Closure $next): ResponseInterface
+    {
+        return $next($request);
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "pixeliste/texo",
+    "description": "A lightweight PSR-compliant PHP framework for building modern API applications",
+    "version": "1.0.0",
+    "type": "project",
+    "keywords": [
+        "api",
+        "framework",
+        "database",
+        "sql",
+        "templating"
+    ],
+    "homepage": "https://pixeliste.fr",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Charles-André Leduc",
+            "email": "contact@pixeliste.fr",
+            "homepage": "https://pixeliste.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}

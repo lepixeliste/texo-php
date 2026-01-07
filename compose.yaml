@@ -1,0 +1,54 @@
+services:
+  dev:
+    container_name: 'texo-dev'
+    build:
+      context: .
+      target: development
+      dockerfile: ./.dockerfiles/dev.Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - mariadb
+    environment:
+      APP_NAME: texo-php
+      APP_ENV: development
+      APP_MEMORY_LIMIT: 256M
+      APP_VERSION: 1.0.0
+      APP_CHARSET: utf-8
+      APP_TIMEZONE: Europe/London
+      APP_LOCALE: 0
+      APP_BASE_URL: /
+      APP_STORAGE: /files
+      SQL_DB: sandbox
+      SQL_HOST: mariadb
+      SQL_PORT: 3306
+      SQL_USER: root
+      SQL_PASS: root
+      SQL_CHARSET: utf8mb4
+      SQL_COLLATE: utf8mb4_unicode_ci
+    volumes:
+      - ./:/var/www/html
+      - ./../files/:/var/www/files
+
+  adminer:
+    container_name: 'texo-adminer'
+    image: adminer:latest
+    ports:
+      - 8000:8080
+    depends_on:
+      - mariadb
+    environment:
+      ADMINER_DEFAULT_SERVER: mariadb
+
+  mariadb:
+    container_name: 'texo-mariadb'
+    build:
+      dockerfile: ./.dockerfiles/mariadb.Dockerfile
+    image: mariadb:11.4
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ./.mariadb/my.cnf:/etc/mysql/my.cnf
+      - ./db/data:/var/lib/mysql
+    ports:
+      - 3306:3306

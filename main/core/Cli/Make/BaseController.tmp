@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Controllers;
+
+use Core\Controller;
+use Core\Http\Request;
+
+/**
+ * %_NAME_%
+ *
+ * @version %_VERSION_%
+ */
+
+class %_NAME_% extends Controller
+{
+    public function list(Request $request)
+    {
+        return response()->json(['message' => "`list` not implemented yet."]);
+    }
+
+    public function get($id)
+    {
+        return response()->json(['message' => "`get` not implemented yet."]);
+    }
+
+    public function create(Request $request)
+    {
+        return response()->json(['message' => "`create` not implemented yet."]);
+    }
+
+    public function update($id, Request $request)
+    {
+        return response()->json(['message' => "`update` not implemented yet."]);
+    }
+
+    public function delete()
+    {
+        return response()->json(['message' => "`delete` not implemented yet."]);
+    }
+}

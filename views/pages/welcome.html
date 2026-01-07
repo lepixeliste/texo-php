@@ -1,0 +1,21 @@
+<html lang="<?= esc_attr($lang) ?>">
+  <head>
+    <? include('./includes/head.html') ?>
+    <title>Welcome</title>
+    <link rel="icon" type="image/png" href="<?= asset('favicon.png') ?>" />
+    <link rel="stylesheet" type="text/css" href="<?= asset('css/index.css') ?>" />
+  </head>
+
+  <body class="flex items-center justify-center min-h-screen bg-white">
+    <div class="text-center">
+      <img alt="" class="block mx-auto max-w-64 w-full h-auto" src="<?= asset('favicon.svg') ?>" />
+      <p class="text-xl text-indigo-600 font-bold tracking-tight">
+        Minimalist PHP API
+      </p>
+      <h1 class="text-6xl text-indigo-600 font-bold tracking-wider uppercase">
+        Texo
+      </h1>
+    </div>
+    <script type="module" src="<?= asset('js/index.js') ?>"></script>
+  </body>
+</html>

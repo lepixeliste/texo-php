@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Resources;
+
+use Core\Pdo\ModelResource;
+
+/**
+ * %_NAME_%
+ *
+ * @version %_VERSION_%
+ */
+
+class %_NAME_% extends ModelResource
+{
+    public function toArray()
+    {
+        return [];
+    }
+}

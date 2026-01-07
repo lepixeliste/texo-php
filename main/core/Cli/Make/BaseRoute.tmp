@@ -1,0 +1,17 @@
+<?php
+
+use Core\App;
+use Core\Routing\Router;
+
+/**
+ * %_NAME_%.php
+ *
+ * @version %_VERSION_%
+ */
+
+return function (Router $router, App $app) {
+    $router->get(':match(.*)', function () {
+        return response()->text('matching `.*`');
+    });
+};
+

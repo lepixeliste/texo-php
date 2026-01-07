@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Casts;
+
+use Core\Pdo\CastAttribute;
+use Core\Pdo\Model;
+
+/**
+ * %_NAME_%
+ *
+ * @version %_VERSION_%
+ */
+
+class %_NAME_% implements CastAttribute
+{
+    public function get(Model $model, $key, $value, $attributes)
+    {
+        return $value;
+    }
+    
+    public function set(Model $model, $key, $value, $attributes)
+    {
+        return $value;
+    }
+}

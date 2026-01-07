@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
+require_once dirname(__FILE__) . '/main/functions.php';
+require_once dirname(__FILE__) . '/main/autoload.php';
+
+Core\Env::boot();
+
+$container = new Core\Container();
+$processor = $container->get('Core\Cli\Interpreter');
+if (!($processor instanceof Core\Cli\Interpreter)) {
+    exit;
+}
+$processor->boot();
+$processor->runCommand($argv);
+
+exit(0);

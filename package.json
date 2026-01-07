@@ -1,0 +1,16 @@
+{
+  "name": "@pixeliste/texo",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:ts && npm run build:tw",
+    "build:ts": "tsc",
+    "build:tw": "npx @tailwindcss/cli -i ./assets/css/tw.css -o ./assets/css/index.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
+}
